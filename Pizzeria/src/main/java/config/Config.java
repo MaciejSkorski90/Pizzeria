@@ -7,7 +7,7 @@ import implementation.Order;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class Config {
 
     /* Odwrócenie sterowania (ang. Inversion of Control, IoC) – paradygmat (czasami rozważany też jako wzorzec projektowy lub wzorzec architektury)
@@ -20,15 +20,15 @@ public class Config {
     * w celu rozróżnienia pomiędzy tymi dwoma terminami. Wiele osób wskazuje, że formami IoC są również programowanie aspektowe oraz wzorzec strategii.
      */
 
-    @Bean
+   /* @Bean
     public IPizza pizza(){
         return new GoodPizza(45,"Pizza Smaczna");  // nie musimy zmieniać kodu w klasie PizzeriaApplication
-    }
+    } */
 
-    @Bean
+   /* @Bean
     public IOrder order(IPizza pizza){
         return new Order(pizza);
-    }
+    } */
 
 
 

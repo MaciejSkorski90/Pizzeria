@@ -1,14 +1,15 @@
 package com.Pizzeria.Pizzeria;
 
 import api.IOrder;
-import config.Config;
+import config.AutoConfig;
+// import config.Config;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 public class PizzeriaApplication {
 	public static void main(String[] args)
 	{
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AutoConfig.class);
 		IOrder order = (IOrder)context.getBean("order"); // inny sposób pobrania Beana IOrder order = context.getBean(Order.class);
 		order.printOrder();
 
