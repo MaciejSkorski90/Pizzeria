@@ -10,7 +10,7 @@ public class PizzeriaApplication {
 	public static void main(String[] args)
 	{
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AutoConfig.class);
-		IOrder order = (IOrder)context.getBean("order"); // inny sposób pobrania Beana IOrder order = context.getBean(Order.class);
+		IOrder order = context.getBean(IOrder.class);
 		order.printOrder();
 
 		/*  IOrder order = new Order(new ExoticPizaa(17,"Pizza Egzotyczna");

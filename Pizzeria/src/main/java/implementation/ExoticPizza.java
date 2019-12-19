@@ -1,5 +1,6 @@
 package implementation;
 
+import api.GoodPizza;
 import api.IPizza;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,7 +9,9 @@ import org.springframework.stereotype.Component;
 
 //@Primary //dodając adnotacje @Primary wybieramy komponent który zostanie wstrzyknięty z pominięciem pozostałych (GoodPizza Czy ExoticPizza)
 @Component
-@Qualifier("Egzotyczna")
+//@Qualifier("Egzotyczna")
+@Primary
+@GoodPizza
 public class ExoticPizza implements IPizza {
 
     private int price;
